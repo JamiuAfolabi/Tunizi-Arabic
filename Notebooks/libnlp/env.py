@@ -12,6 +12,7 @@ class Env:
         self.ppd_path='../ppd'
         
         #Definining the tokenizer
+        self.tokenizer_name=tokenizer_model
         self.tokenizer=torch.hub.load('huggingface/pytorch-transformers', 'tokenizer',tokenizer_model )
         self.model=torch.hub.load('huggingface/pytorch-transformers', 'model',tokenizer_model )
         self.tokenizer_max_len=max_len
